@@ -25,4 +25,5 @@ struct LiftLogApp: App {
         }
     }
     // teest comment GIT
+    // test comment2 ("anmol Commit")
 }
