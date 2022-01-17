@@ -24,4 +24,5 @@ struct LiftLogApp: App {
             WorkoutListView()
         }
     }
+    // teest comment GIT
 }
