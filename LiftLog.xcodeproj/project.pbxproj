@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52A7671327A091760093C1D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671227A091760093C1D5 /* SceneDelegate.swift */; };
+		52A7671527A091DC0093C1D5 /* SpeechSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671427A091DC0093C1D5 /* SpeechSwiftUI.swift */; };
+		52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671627A0922F0093C1D5 /* SpeechButton.swift */; };
+		52EEF950279F235C00B68382 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EEF94F279F235C00B68382 /* Intents.framework */; };
+		52EEF953279F235C00B68382 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EEF952279F235C00B68382 /* IntentHandler.swift */; };
+		52EEF957279F235C00B68382 /* LiftLogExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52EEF94D279F235C00B68382 /* LiftLogExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		52EEF95D279F262F00B68382 /* LiftLogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EEF95C279F262F00B68382 /* LiftLogHandler.swift */; };
 		FFA09E79278E1D3B00345BA4 /* LiftLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */; };
 		FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA09E7A278E1D3B00345BA4 /* ContentView.swift */; };
 		FFA09E7D278E1D3C00345BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA09E7C278E1D3C00345BA4 /* Assets.xcassets */; };
@@ -24,7 +31,40 @@
 		FFBA23FB278F7A8D00F41359 /* WorkoutView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA23FA278F7A8D00F41359 /* WorkoutView.Model.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		52EEF955279F235C00B68382 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFA09E6D278E1D3B00345BA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52EEF94C279F235C00B68382;
+			remoteInfo = LiftLogExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52EEF958279F235C00B68382 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52EEF957279F235C00B68382 /* LiftLogExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		52A7671127A0756C0093C1D5 /* LiftLog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiftLog.entitlements; sourceTree = "<group>"; };
+		52A7671227A091760093C1D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52A7671427A091DC0093C1D5 /* SpeechSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSwiftUI.swift; sourceTree = "<group>"; };
+		52A7671627A0922F0093C1D5 /* SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
+		52EEF94D279F235C00B68382 /* LiftLogExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiftLogExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EEF94F279F235C00B68382 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		52EEF952279F235C00B68382 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		52EEF954279F235C00B68382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EEF95C279F262F00B68382 /* LiftLogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogHandler.swift; sourceTree = "<group>"; };
 		FFA09E75278E1D3B00345BA4 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogApp.swift; sourceTree = "<group>"; };
 		FFA09E7A278E1D3B00345BA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +81,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		52EEF94A279F235C00B68382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EEF950279F235C00B68382 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFA09E72278E1D3B00345BA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +102,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52EEF94E279F235C00B68382 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52EEF94F279F235C00B68382 /* Intents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52EEF951279F235C00B68382 /* LiftLogExtension */ = {
+			isa = PBXGroup;
+			children = (
+				52EEF952279F235C00B68382 /* IntentHandler.swift */,
+				52EEF95C279F262F00B68382 /* LiftLogHandler.swift */,
+				52EEF954279F235C00B68382 /* Info.plist */,
+			);
+			path = LiftLogExtension;
+			sourceTree = "<group>";
+		};
 		FFA09E6C278E1D3B00345BA4 = {
 			isa = PBXGroup;
 			children = (
 				FFA09E77278E1D3B00345BA4 /* LiftLog */,
+				52EEF951279F235C00B68382 /* LiftLogExtension */,
+				52EEF94E279F235C00B68382 /* Frameworks */,
 				FFA09E76278E1D3B00345BA4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FFA09E75278E1D3B00345BA4 /* LiftLog.app */,
+				52EEF94D279F235C00B68382 /* LiftLogExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +142,9 @@
 		FFA09E77278E1D3B00345BA4 /* LiftLog */ = {
 			isa = PBXGroup;
 			children = (
+				52A7671127A0756C0093C1D5 /* LiftLog.entitlements */,
 				FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */,
+				52A7671227A091760093C1D5 /* SceneDelegate.swift */,
 				FFBA23E4278F5E2B00F41359 /* Repositories */,
 				FFBA23E5278F5E3D00F41359 /* Models */,
 				FFBA23E6278F5E5200F41359 /* Views */,
@@ -106,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				FFBA23EC278F6BBC00F41359 /* Workout.swift */,
+				52A7671427A091DC0093C1D5 /* SpeechSwiftUI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +189,7 @@
 				FFBA23F6278F7A4000F41359 /* WorkoutView.swift */,
 				FFBA23F8278F7A6200F41359 /* NewWorkoutForm.swift */,
 				FFBA23F1278F78B600F41359 /* WorkoutListView.swift */,
+				52A7671627A0922F0093C1D5 /* SpeechButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +221,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		52EEF94C279F235C00B68382 /* LiftLogExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52EEF95B279F235C00B68382 /* Build configuration list for PBXNativeTarget "LiftLogExtension" */;
+			buildPhases = (
+				52EEF949279F235C00B68382 /* Sources */,
+				52EEF94A279F235C00B68382 /* Frameworks */,
+				52EEF94B279F235C00B68382 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiftLogExtension;
+			productName = LiftLogExtension;
+			productReference = 52EEF94D279F235C00B68382 /* LiftLogExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FFA09E74278E1D3B00345BA4 /* LiftLog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFA09E83278E1D3C00345BA4 /* Build configuration list for PBXNativeTarget "LiftLog" */;
@@ -155,10 +245,12 @@
 				FFA09E71278E1D3B00345BA4 /* Sources */,
 				FFA09E72278E1D3B00345BA4 /* Frameworks */,
 				FFA09E73278E1D3B00345BA4 /* Resources */,
+				52EEF958279F235C00B68382 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				52EEF956279F235C00B68382 /* PBXTargetDependency */,
 			);
 			name = LiftLog;
 			packageProductDependencies = (
@@ -177,9 +269,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					52EEF94C279F235C00B68382 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					FFA09E74278E1D3B00345BA4 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -202,11 +297,19 @@
 			projectRoot = "";
 			targets = (
 				FFA09E74278E1D3B00345BA4 /* LiftLog */,
+				52EEF94C279F235C00B68382 /* LiftLogExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		52EEF94B279F235C00B68382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFA09E73278E1D3B00345BA4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +323,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		52EEF949279F235C00B68382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EEF95D279F262F00B68382 /* LiftLogHandler.swift in Sources */,
+				52EEF953279F235C00B68382 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FFA09E71278E1D3B00345BA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +341,9 @@
 				FFBA23F7278F7A4000F41359 /* WorkoutView.swift in Sources */,
 				FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */,
 				FFBA23EB278F5FB500F41359 /* WorkoutRepository.swift in Sources */,
+				52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */,
+				52A7671327A091760093C1D5 /* SceneDelegate.swift in Sources */,
+				52A7671527A091DC0093C1D5 /* SpeechSwiftUI.swift in Sources */,
 				FFBA23F2278F78B600F41359 /* WorkoutListView.swift in Sources */,
 				FFBA23EF278F75C100F41359 /* WorkoutListView.Model.swift in Sources */,
 				FFA09E79278E1D3B00345BA4 /* LiftLogApp.swift in Sources */,
@@ -238,7 +353,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		52EEF956279F235C00B68382 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52EEF94C279F235C00B68382 /* LiftLogExtension */;
+			targetProxy = 52EEF955279F235C00B68382 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		52EEF959279F235C00B68382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4H5L662NC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiftLogExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiftLogExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.i23.LiftLog.LiftLogExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52EEF95A279F235C00B68382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V4H5L662NC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LiftLogExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LiftLogExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.i23.LiftLog.LiftLogExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FFA09E81278E1D3C00345BA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -290,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -345,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -358,14 +531,17 @@
 		FFA09E84278E1D3C00345BA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LiftLog/LiftLog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiftLog/Preview Content\"";
-				DEVELOPMENT_TEAM = MFS52BPS4R;
+				DEVELOPMENT_TEAM = V4H5L662NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to record user input.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -387,14 +563,17 @@
 		FFA09E85278E1D3C00345BA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LiftLog/LiftLog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiftLog/Preview Content\"";
-				DEVELOPMENT_TEAM = MFS52BPS4R;
+				DEVELOPMENT_TEAM = V4H5L662NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to record user input.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -416,6 +595,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		52EEF95B279F235C00B68382 /* Build configuration list for PBXNativeTarget "LiftLogExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52EEF959279F235C00B68382 /* Debug */,
+				52EEF95A279F235C00B68382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FFA09E70278E1D3B00345BA4 /* Build configuration list for PBXProject "LiftLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

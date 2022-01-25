@@ -15,7 +15,8 @@ struct Workout: Identifiable, Codable {
     var reps: String
     var weight: String
     var userID: String?
+    var created_date: Date
 }
 
-let testData = (1...10).map { i in Workout(name: "Name #\(i)", set: "Set #\(i)", reps: "Reps #\(i)", weight: "Weight #\(i)")
+let testData = (1...10).map { i in Workout(name: "Name #\(i)", set: "Set #\(i)", reps: "Reps #\(i)", weight: "Weight #\(i)", created_date: Date.now)
 }

@@ -21,7 +21,6 @@ class WorkoutRepository: ObservableObject {
     }
     
     func get() {
-        print("DRASKO IS GAAAAAYYYYY")
         store.collection(path)
             .addSnapshotListener { querySnapShot, error in
                 if let error = error {
@@ -34,6 +33,11 @@ class WorkoutRepository: ObservableObject {
                 } ?? []
                 print(self.workout)
             }
+    }
+    
+    // function to query database for workout based on userID, name, set number, date:
+    func get_workout(userID:Int, name:String, set:Int, date:Date) {
+        
     }
     
     func add(_ workout: Workout) {

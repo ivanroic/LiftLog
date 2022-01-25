@@ -14,6 +14,7 @@ extension WorkoutView {
     @Published var workout: Workout
     private var cancellables: Set<AnyCancellable> = []
     var id = ""
+    let dateFormatter = DateFormatter()
 
     func update(workout: Workout) {
         workoutRepository.update(workout)
@@ -23,9 +24,15 @@ extension WorkoutView {
         workoutRepository.remove(workout)
     }
     
+      func setFormatForDate(){
+          self.dateFormatter.dateFormat = "YY/MM/dd"
+      }
+      
+    
     init(workout: Workout, workoutRepository: WorkoutRepository) {
         self.workoutRepository = workoutRepository
         self.workout = workout
+        setFormatForDate()
       
       $workout
         .compactMap { $0.id }

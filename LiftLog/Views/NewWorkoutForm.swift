@@ -55,7 +55,8 @@ struct NewWorkoutForm: View {
 
     private func addWorkout() {
         let userID = "1"
-        let workout = Workout(name: name, set: set, reps: reps, weight: weight, userID: userID)
+        let date = Date.now
+        let workout = Workout(name: name, set: set, reps: reps, weight: weight, userID: userID, created_date: date)
         workoutListViewModel.add(workout)
         presentationMode.wrappedValue.dismiss()
         }

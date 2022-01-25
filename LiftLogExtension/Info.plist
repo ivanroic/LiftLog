@@ -20,5 +20,7 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).IntentHandler</string>
 	</dict>
+	<key>NSSiriUsageDescription</key>
+	<string>Siri Support is used to record user input.</string>
 </dict>
 </plist>

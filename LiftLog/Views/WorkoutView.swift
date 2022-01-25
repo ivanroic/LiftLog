@@ -9,10 +9,14 @@ import Foundation
 import SwiftUI
 
 struct WorkoutView: View {
-  var model: Model
-  @State var showContent = false
-  @State var deleting = false
-  @State var showAlert = false
+    var model: Model
+    @State var showContent = false
+    @State var deleting = false
+    @State var showAlert = false
+    @State var set = ""
+
+    
+    
   
   var body: some View {
     ZStack {
@@ -68,7 +72,7 @@ struct WorkoutView: View {
       )
     }
   }
-  
+    var gestureCheck:Bool = false
   var frontView: some View {
     VStack(alignment: .center) {
       Spacer()
@@ -78,10 +82,11 @@ struct WorkoutView: View {
         .fontWeight(.bold)
         .multilineTextAlignment(.center)
         .padding(20.0)
+        
       Spacer()
         
 //      if !model.workout.set {
-        Text("Well Done!")
+        Text(model.dateFormatter.string(from:model.workout.created_date))
           .foregroundColor(.white)
           .font(.system(size: 11.0))
           .fontWeight(.bold)
@@ -91,9 +96,15 @@ struct WorkoutView: View {
   }
   
   var backView: some View {
+//    VStack(alignment: .center, spacing: 30) {
+//        VStack(alignment: .leading, spacing: 10) {
+//              Text("Set")
+//                .foregroundColor(.gray)
+//              TextField("Set Number", text: $set)
+//                .textFieldStyle(RoundedBorderTextFieldStyle())
+//                }
     VStack {
       Spacer()
-      
       Text(model.workout.name)
         .foregroundColor(Color("rw-dark"))
         .font(.system(size: 20))
@@ -118,14 +129,11 @@ struct WorkoutView: View {
     }
     .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
   }
-  
-  private func markSuccess(_ successful: Bool) {
-//      var updatedWorkout = model.workout
-//      updatedWorkout.successful = successful
-//      model.update(workout: updatedWorkout)
-//      showContent.toggle()
   }
-}
+//  private func showWorkout(_ set: Int) {
+//
+//  }
+//}
 
 struct WorkoutView_Previews: PreviewProvider {
   static var previews: some View {
@@ -156,3 +164,5 @@ struct ThumbsUp: View {
       .clipShape(Circle())
   }
 }
+
+
