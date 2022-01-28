@@ -30,7 +30,7 @@ struct WorkoutListView: View {
         }
       }
       .sheet(isPresented: $showForm) {
-        NewWorkoutForm(workoutListViewModel: model)
+          NewWorkoutForm(workoutListViewModel: model)
       }
       .navigationTitle("Workout Cards")
       .navigationBarTitleDisplayMode(.inline)

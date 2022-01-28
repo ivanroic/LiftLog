@@ -22,5 +22,9 @@
 	</dict>
 	<key>NSSiriUsageDescription</key>
 	<string>Siri Support is used to record user input.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Usage Access for Microphone</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Info sent to Apple for processing</string>
 </dict>
 </plist>

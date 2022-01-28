@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52A7671327A091760093C1D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671227A091760093C1D5 /* SceneDelegate.swift */; };
-		52A7671527A091DC0093C1D5 /* SpeechSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671427A091DC0093C1D5 /* SpeechSwiftUI.swift */; };
+		52A7671527A091DC0093C1D5 /* SwiftUISpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */; };
 		52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671627A0922F0093C1D5 /* SpeechButton.swift */; };
+		52A8E9D027A1DE08004BF042 /* RecordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */; };
 		52EEF950279F235C00B68382 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EEF94F279F235C00B68382 /* Intents.framework */; };
 		52EEF953279F235C00B68382 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EEF952279F235C00B68382 /* IntentHandler.swift */; };
 		52EEF957279F235C00B68382 /* LiftLogExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52EEF94D279F235C00B68382 /* LiftLogExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -57,9 +57,9 @@
 
 /* Begin PBXFileReference section */
 		52A7671127A0756C0093C1D5 /* LiftLog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiftLog.entitlements; sourceTree = "<group>"; };
-		52A7671227A091760093C1D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52A7671427A091DC0093C1D5 /* SpeechSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSwiftUI.swift; sourceTree = "<group>"; };
+		52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISpeech.swift; sourceTree = "<group>"; };
 		52A7671627A0922F0093C1D5 /* SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
+		52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTextView.swift; sourceTree = "<group>"; };
 		52EEF94D279F235C00B68382 /* LiftLogExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LiftLogExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EEF94F279F235C00B68382 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		52EEF952279F235C00B68382 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -144,7 +144,6 @@
 			children = (
 				52A7671127A0756C0093C1D5 /* LiftLog.entitlements */,
 				FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */,
-				52A7671227A091760093C1D5 /* SceneDelegate.swift */,
 				FFBA23E4278F5E2B00F41359 /* Repositories */,
 				FFBA23E5278F5E3D00F41359 /* Models */,
 				FFBA23E6278F5E5200F41359 /* Views */,
@@ -177,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FFBA23EC278F6BBC00F41359 /* Workout.swift */,
-				52A7671427A091DC0093C1D5 /* SpeechSwiftUI.swift */,
+				52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +189,7 @@
 				FFBA23F8278F7A6200F41359 /* NewWorkoutForm.swift */,
 				FFBA23F1278F78B600F41359 /* WorkoutListView.swift */,
 				52A7671627A0922F0093C1D5 /* SpeechButton.swift */,
+				52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,11 +339,11 @@
 				FFBA23FB278F7A8D00F41359 /* WorkoutView.Model.swift in Sources */,
 				FFBA23F9278F7A6200F41359 /* NewWorkoutForm.swift in Sources */,
 				FFBA23F7278F7A4000F41359 /* WorkoutView.swift in Sources */,
+				52A8E9D027A1DE08004BF042 /* RecordTextView.swift in Sources */,
 				FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */,
 				FFBA23EB278F5FB500F41359 /* WorkoutRepository.swift in Sources */,
 				52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */,
-				52A7671327A091760093C1D5 /* SceneDelegate.swift in Sources */,
-				52A7671527A091DC0093C1D5 /* SpeechSwiftUI.swift in Sources */,
+				52A7671527A091DC0093C1D5 /* SwiftUISpeech.swift in Sources */,
 				FFBA23F2278F78B600F41359 /* WorkoutListView.swift in Sources */,
 				FFBA23EF278F75C100F41359 /* WorkoutListView.Model.swift in Sources */,
 				FFA09E79278E1D3B00345BA4 /* LiftLogApp.swift in Sources */,
@@ -541,7 +541,10 @@
 				DEVELOPMENT_TEAM = V4H5L662NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of Microphone of Audio Input";
 				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to record user input.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Info sent to Apple for processing";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,7 +576,10 @@
 				DEVELOPMENT_TEAM = V4H5L662NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of Microphone of Audio Input";
 				INFOPLIST_KEY_NSSiriUsageDescription = "Siri support is used to record user input.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Info sent to Apple for processing";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

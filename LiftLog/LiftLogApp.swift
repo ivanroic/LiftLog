@@ -14,12 +14,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         FirebaseApp.configure()
         return true
     }
-    
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
 }
 
 @main
@@ -30,7 +24,8 @@ struct LiftLogApp: App {
     
     var body: some Scene {
         WindowGroup {
-            WorkoutListView()
+            RecordTextView().environmentObject(SwiftUISpeech())
+            //WorkoutListView()
         }
         .onChange(of: scenePhase) { phase in
                     INPreferences.requestSiriAuthorization({status in

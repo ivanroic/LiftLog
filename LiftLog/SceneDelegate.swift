@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView().environmentObject(swiftUISpeech)// passes the class as an environment object
+        let contentView = RecordTextView().environmentObject(swiftUISpeech)// passes the class as an environment object
         
         // Use a UIHostingController as window root view controller.
         
