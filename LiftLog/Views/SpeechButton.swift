@@ -22,7 +22,9 @@ struct SpeechButton: View {
                 self.actionPop.toggle()
             }else{
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.3, blendDuration: 0.3)){self.swiftUISpeech.isRecording.toggle()}// button animation
-                self.swiftUISpeech.isRecording ? self.swiftUISpeech.startRecording() : workoutListViewModel.add(self.swiftUISpeech.stopRecording())
+                self.swiftUISpeech.isRecording ? self.swiftUISpeech.startRecording() :
+                self.swiftUISpeech.stopRecording().name=="" || self.swiftUISpeech.stopRecording().set=="" || self.swiftUISpeech.stopRecording().reps=="" || self.swiftUISpeech.stopRecording().weight=="" ? self.swiftUISpeech.stopRecordingWithoutObject() :
+                workoutListViewModel.add(self.swiftUISpeech.stopRecording())
             }
         }){
             Image(systemName: "waveform")// Button Image

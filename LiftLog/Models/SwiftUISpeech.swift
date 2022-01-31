@@ -122,25 +122,45 @@ public class SwiftUISpeech: ObservableObject{
                 let error_msg = "No Workout Found"
             }
         }
-        
+        print(workout)
         for num in 1...20{
             if self.outputText.lowercased().contains("set \(num)") {
                 set = "Set \(num)"
             }
         }
-        
-        if self.outputText.lowercased().contains("10 reps") {
-            rep = "10"
+        for num in workout_Sets{
+            if self.outputText.lowercased().contains("set \(num)") {
+                set = "Set \(num)"
+            }
         }
-        if self.outputText.lowercased().contains("135 pounds") {
-            weight = "135"
+        print(set)
+        for num in 1...100{
+            // Create check for one rep
+            if self.outputText.lowercased().contains("reps \(num)") {
+                rep = "\(num) reps"
+            }
         }
-        
+        print(rep)
+        for num in 1...1000{
+            if self.outputText.lowercased().contains("pounds \(num)") {
+            weight = "\(num) pounds"
+            }
+        }
+        print(weight)
+            
         let userID = "1"
         let date = Date.now
         self.workout_obj = Workout(name: workout, set: set, reps: rep, weight: weight, userID: userID, created_date: date)
         return workout_obj
     }// restarts the variables
+    
+    func stopRecordingWithoutObject() {
+        audioEngine.stop()
+        recognitionRequest?.endAudio()
+        self.audioEngine.inputNode.removeTap(onBus: 0)
+        self.recognitionTask?.cancel()
+        self.recognitionTask = nil
+    }
     
     
     func getSpeechStatus()->String{// gets the status of authorization
@@ -176,7 +196,8 @@ public class SwiftUISpeech: ObservableObject{
     private let authStat = SFSpeechRecognizer.authorizationStatus()
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
-    private let workout_Names:[String] = ["bench press", "squat", "deadlift", "shoulder press", "barbell rows"]
+    private let workout_Names:[String] = ["bench press", "squat", "dead lift", "shoulder press", "barbell rows"]
+    private let workout_Sets:[String] = ["one", "two", "three", "four", "five"]
     private var workout_obj = Workout(name: "default", set: "def", reps: "def", weight: "def", created_date: Date.now)
     public var outputText:String = "";
 }
