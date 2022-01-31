@@ -31,7 +31,7 @@ class WorkoutRepository: ObservableObject {
                     document in
                     try? document.data(as: Workout.self)
                 } ?? []
-                print(self.workout)
+                //print(self.workout)
             }
     }
     

@@ -10,9 +10,9 @@ import Speech
 
 
 struct RecordTextView: View {
+    @ObservedObject var model = Model()
     @EnvironmentObject var swiftUISpeech:SwiftUISpeech
     @Environment(\.presentationMode) var presentationMode
-
     
     var body: some View {
         VStack {

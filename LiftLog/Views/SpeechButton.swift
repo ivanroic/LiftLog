@@ -14,7 +14,7 @@ struct SpeechButton: View {
     @State var isPressed:Bool = false
     @State var actionPop:Bool = false
     @EnvironmentObject var swiftUISpeech:SwiftUISpeech
-    
+    @ObservedObject var workoutListViewModel: WorkoutListView.Model
     var body: some View {
         
         Button(action:{// Button
@@ -22,7 +22,7 @@ struct SpeechButton: View {
                 self.actionPop.toggle()
             }else{
                 withAnimation(.spring(response: 0.4, dampingFraction: 0.3, blendDuration: 0.3)){self.swiftUISpeech.isRecording.toggle()}// button animation
-                self.swiftUISpeech.isRecording ? self.swiftUISpeech.startRecording() : self.swiftUISpeech.stopRecording()
+                self.swiftUISpeech.isRecording ? self.swiftUISpeech.startRecording() : workoutListViewModel.add(self.swiftUISpeech.stopRecording())
             }
         }){
             Image(systemName: "waveform")// Button Image
@@ -38,6 +38,6 @@ struct SpeechButton: View {
 
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
-        SpeechButton().environmentObject(SwiftUISpeech())
+        SpeechButton( workoutListViewModel: WorkoutListView.Model()).environmentObject(SwiftUISpeech())
     }
 }

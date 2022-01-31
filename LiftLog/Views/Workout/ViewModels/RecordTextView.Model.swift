@@ -1,14 +1,14 @@
 //
-//  WorkoutListView.swift
+//  RecordTextView.Model.swift
 //  LiftLog
 //
-//  Created by Ivan R on 2022-01-12.
+//  Created by MacbookPro on 1/28/22.
 //
 
 import Foundation
 import Combine
 
-extension WorkoutListView {
+extension RecordTextView {
     final class Model: ObservableObject {
         @Published var workoutViewModels: [WorkoutView.Model] = []
         @Published var workoutRepository = WorkoutRepository()

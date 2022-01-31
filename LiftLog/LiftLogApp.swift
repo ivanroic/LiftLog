@@ -19,7 +19,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct LiftLogApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some Scene {
