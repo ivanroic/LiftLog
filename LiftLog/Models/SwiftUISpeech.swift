@@ -110,9 +110,20 @@ public class SwiftUISpeech: ObservableObject{
         var rep:String = ""
         var workout:String = ""
         var weight:String = ""
-        if self.outputText.lowercased().contains("bench press") {
-            workout = "Bench Press"
+        
+        //search the workout name array for a match to the workout mentioned in the speech recording
+        
+        for workout_name in self.workout_Names {
+            if self.outputText.lowercased().contains(workout_name) {
+                workout = workout_name
+            }
+            else {
+                //error if no workout is found
+                let error_msg = "No Workout Found"
+            }
         }
+        
+       
         if self.outputText.lowercased().contains("set 1") {
             set = "Set 1"
         }
