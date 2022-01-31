@@ -123,10 +123,12 @@ public class SwiftUISpeech: ObservableObject{
             }
         }
         
-       
-        if self.outputText.lowercased().contains("set 1") {
-            set = "Set 1"
+        for num in 1...20{
+            if self.outputText.lowercased().contains("set \(num)") {
+                set = "Set \(num)"
+            }
         }
+        
         if self.outputText.lowercased().contains("10 reps") {
             rep = "10"
         }
