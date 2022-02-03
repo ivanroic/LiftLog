@@ -15,9 +15,6 @@ struct WorkoutView: View {
     @State var showAlert = false
     @State var set = ""
 
-    
-    
-  
   var body: some View {
     ZStack {
       backView.opacity(showContent ? 1 : 0)

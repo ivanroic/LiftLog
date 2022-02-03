@@ -201,3 +201,9 @@ public class SwiftUISpeech: ObservableObject{
     private var workout_obj = Workout(name: "default", set: "def", reps: "def", weight: "def", created_date: Date.now)
     public var outputText:String = "";
 }
+
+struct Previews_SwiftUISpeech_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}

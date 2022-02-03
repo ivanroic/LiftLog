@@ -10,25 +10,48 @@ import Speech
 
 
 struct RecordTextView: View {
+    @State var showForm = false
+    @State var showUserView = false
     @ObservedObject var model = Model()
     @EnvironmentObject var swiftUISpeech:SwiftUISpeech
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            VStack{
-                Text("\(swiftUISpeech.outputText)")// prints results to screen
-                    .font(.title)
-                    .bold()
+            VStack {
+                NavigationView {
+                  GeometryReader { geometry in
+                  }
+                  .sheet(isPresented: $showForm) {
+        //              NewWorkoutForm(workoutListViewModel: model)
+                  }
+                  .navigationTitle("Record Your Workout")
+                  .navigationBarTitleDisplayMode(.inline)
+                  .navigationBarItems(
+                    leading:
+                      Button { showUserView = true }
+                        label: {
+                          Image(systemName: "person.fill")
+                            .font(.title)
+                        },
+                    trailing:
+                      Button { showForm.toggle() }
+                        label: {
+                          Image(systemName: "plus")
+                            .font(.title)
+                        }
+                  )
+                }
+                VStack{
+                    Text("\(swiftUISpeech.outputText)")// prints results to screen
+                        .font(.title)
+                        .bold()
+                }.frame(width: 300,height: 200)
                 
-            }.frame(width: 300,height: 400)
-            
-            VStack {// Speech button
-                
-                swiftUISpeech.getButton()
-                Spacer()
-            }
-            
+                VStack {// Speech button
+                    
+                    swiftUISpeech.getButton()
+                    Spacer()
+                }
         }
     }
 }

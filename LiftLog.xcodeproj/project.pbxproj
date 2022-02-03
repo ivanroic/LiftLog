@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				FFBA23EE278F75C100F41359 /* WorkoutListView.Model.swift */,
-				5297761127A49FC700F19066 /* RecordTextView.Model.swift */,
 				FFBA23FA278F7A8D00F41359 /* WorkoutView.Model.swift */,
+				5297761127A49FC700F19066 /* RecordTextView.Model.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -407,7 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiftLog/Preview Content\"";
-				DEVELOPMENT_TEAM = V4H5L662NC;
+				DEVELOPMENT_TEAM = MFS52BPS4R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -442,7 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiftLog/Preview Content\"";
-				DEVELOPMENT_TEAM = V4H5L662NC;
+				DEVELOPMENT_TEAM = MFS52BPS4R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
