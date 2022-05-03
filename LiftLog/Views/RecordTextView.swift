@@ -12,6 +12,7 @@ import Speech
 struct RecordTextView: View {
     @State var showForm = false
     @State var showUserView = false
+    @State private var isShowingDetailedView = false
     @ObservedObject var model = Model()
     @EnvironmentObject var swiftUISpeech:SwiftUISpeech
     @Environment(\.presentationMode) var presentationMode
@@ -19,11 +20,8 @@ struct RecordTextView: View {
     var body: some View {
             VStack {
                 NavigationView {
-                  GeometryReader { geometry in
-                  }
-                  .sheet(isPresented: $showForm) {
-        //              NewWorkoutForm(workoutListViewModel: model)
-                  }
+                    VStack{
+                    NavigationLink(destination: WorkoutListView(), isActive: $isShowingDetailedView) { EmptyView() }
                   .navigationTitle("Record Your Workout")
                   .navigationBarTitleDisplayMode(.inline)
                   .navigationBarItems(
@@ -34,13 +32,13 @@ struct RecordTextView: View {
                             .font(.title)
                         },
                     trailing:
-                      Button { showForm.toggle() }
-                        label: {
-                          Image(systemName: "plus")
-                            .font(.title)
-                        }
+                        Button {isShowingDetailedView=true}
+                                label: {
+                                    Image(systemName: "chevron.right.circle")
+                                        .font(.title)
+                                    }
                   )
-                }
+                
                 VStack{
                     Text("\(swiftUISpeech.outputText)")// prints results to screen
                         .font(.title)
@@ -52,7 +50,9 @@ struct RecordTextView: View {
                     swiftUISpeech.getButton()
                     Spacer()
                 }
-        }
+                }
+                }
+            }
     }
 }
 
