@@ -11,6 +11,7 @@
 		52A7671527A091DC0093C1D5 /* SwiftUISpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */; };
 		52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671627A0922F0093C1D5 /* SpeechButton.swift */; };
 		52A8E9D027A1DE08004BF042 /* RecordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */; };
+		52B74EE828244529007C5CD8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74EE728244529007C5CD8 /* SignInView.swift */; };
 		FFA09E79278E1D3B00345BA4 /* LiftLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */; };
 		FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA09E7A278E1D3B00345BA4 /* ContentView.swift */; };
 		FFA09E7D278E1D3C00345BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA09E7C278E1D3C00345BA4 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISpeech.swift; sourceTree = "<group>"; };
 		52A7671627A0922F0093C1D5 /* SpeechButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButton.swift; sourceTree = "<group>"; };
 		52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTextView.swift; sourceTree = "<group>"; };
+		52B74EE728244529007C5CD8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		52EEF94F279F235C00B68382 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		FFA09E75278E1D3B00345BA4 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogApp.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				FFBA23E7278F5E9200F41359 /* Workout */,
 				FFBA23F6278F7A4000F41359 /* WorkoutView.swift */,
+				52B74EE728244529007C5CD8 /* SignInView.swift */,
 				FFBA23F8278F7A6200F41359 /* NewWorkoutForm.swift */,
 				FFBA23F1278F78B600F41359 /* WorkoutListView.swift */,
 				52A7671627A0922F0093C1D5 /* SpeechButton.swift */,
@@ -270,6 +273,7 @@
 				FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */,
 				FFBA23EB278F5FB500F41359 /* WorkoutRepository.swift in Sources */,
 				52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */,
+				52B74EE828244529007C5CD8 /* SignInView.swift in Sources */,
 				52A7671527A091DC0093C1D5 /* SwiftUISpeech.swift in Sources */,
 				FFBA23F2278F78B600F41359 /* WorkoutListView.swift in Sources */,
 				FFBA23EF278F75C100F41359 /* WorkoutListView.Model.swift in Sources */,

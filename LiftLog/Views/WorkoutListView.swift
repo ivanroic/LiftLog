@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 
 struct WorkoutListView: View {
-  @ObservedObject var model = Model()
-  @State var showForm = false
-  @State var showUserView = false
-  @State var showSignInView = false
+    @EnvironmentObject var viewModel: AppViewModel
+    @ObservedObject var model = Model()
+    @State var showForm = false
+    @State var showUserView = false
+    @State var showSignInView = false
 //  @State var user: User?`
   
   var body: some View {
@@ -36,7 +37,7 @@ struct WorkoutListView: View {
       .navigationBarTitleDisplayMode(.inline)
       .navigationBarItems(
         leading:
-          Button { showUserView = true }
+            Button { viewModel.signOut() }
             label: {
               Image(systemName: "person.fill")
                 .font(.title)

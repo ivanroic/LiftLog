@@ -23,7 +23,11 @@ struct LiftLogApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RecordTextView().environmentObject(SwiftUISpeech())
+            let viewModel = AppViewModel()
+            InitialView()
+                .environmentObject(viewModel)
+            
+            //RecordTextView().environmentObject(SwiftUISpeech())
             //WorkoutListView()
         }
         .onChange(of: scenePhase) { phase in
