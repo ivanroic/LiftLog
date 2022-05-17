@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526CEC2D2829B8C900DF9544 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 526CEC2C2829B8C900DF9544 /* FirebaseFirestore */; };
+		526CEC2F2829B8D600DF9544 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 526CEC2E2829B8D600DF9544 /* FirebaseFirestoreSwift-Beta */; };
+		526CEC312829B8DD00DF9544 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 526CEC302829B8DD00DF9544 /* FirebaseAuth */; };
+		526CEC342829BFAB00DF9544 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 526CEC332829BFAB00DF9544 /* SwiftUICharts */; };
+		526CEC362834004400DF9544 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CEC352834004300DF9544 /* DashBoardView.swift */; };
 		5297761227A49FC700F19066 /* RecordTextView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297761127A49FC700F19066 /* RecordTextView.Model.swift */; };
 		52A7671527A091DC0093C1D5 /* SwiftUISpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */; };
 		52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A7671627A0922F0093C1D5 /* SpeechButton.swift */; };
 		52A8E9D027A1DE08004BF042 /* RecordTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */; };
 		52B74EE828244529007C5CD8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B74EE728244529007C5CD8 /* SignInView.swift */; };
 		FFA09E79278E1D3B00345BA4 /* LiftLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */; };
-		FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA09E7A278E1D3B00345BA4 /* ContentView.swift */; };
 		FFA09E7D278E1D3C00345BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA09E7C278E1D3C00345BA4 /* Assets.xcassets */; };
 		FFA09E80278E1D3C00345BA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA09E7F278E1D3C00345BA4 /* Preview Assets.xcassets */; };
 		FFA09E87278E1DD200345BA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFA09E86278E1DD200345BA4 /* GoogleService-Info.plist */; };
-		FFA09E8A278E1E2D00345BA4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FFA09E89278E1E2D00345BA4 /* FirebaseAuth */; };
-		FFA09E8C278E1E2D00345BA4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FFA09E8B278E1E2D00345BA4 /* FirebaseFirestore */; };
-		FFA09E8E278E1E2D00345BA4 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FFA09E8D278E1E2D00345BA4 /* FirebaseFirestoreSwift-Beta */; };
 		FFBA23EB278F5FB500F41359 /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA23EA278F5FB500F41359 /* WorkoutRepository.swift */; };
 		FFBA23ED278F6BBC00F41359 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA23EC278F6BBC00F41359 /* Workout.swift */; };
 		FFBA23EF278F75C100F41359 /* WorkoutListView.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA23EE278F75C100F41359 /* WorkoutListView.Model.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		526CEC352834004300DF9544 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
 		5297761127A49FC700F19066 /* RecordTextView.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTextView.Model.swift; sourceTree = "<group>"; };
 		52A7671127A0756C0093C1D5 /* LiftLog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiftLog.entitlements; sourceTree = "<group>"; };
 		52A7671427A091DC0093C1D5 /* SwiftUISpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISpeech.swift; sourceTree = "<group>"; };
@@ -52,7 +54,6 @@
 		52EEF94F279F235C00B68382 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		FFA09E75278E1D3B00345BA4 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA09E78278E1D3B00345BA4 /* LiftLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogApp.swift; sourceTree = "<group>"; };
-		FFA09E7A278E1D3B00345BA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFA09E7C278E1D3C00345BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA09E7F278E1D3C00345BA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FFA09E86278E1DD200345BA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -70,9 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA09E8E278E1E2D00345BA4 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				FFA09E8A278E1E2D00345BA4 /* FirebaseAuth in Frameworks */,
-				FFA09E8C278E1E2D00345BA4 /* FirebaseFirestore in Frameworks */,
+				526CEC2D2829B8C900DF9544 /* FirebaseFirestore in Frameworks */,
+				526CEC342829BFAB00DF9544 /* SwiftUICharts in Frameworks */,
+				526CEC312829B8DD00DF9544 /* FirebaseAuth in Frameworks */,
+				526CEC2F2829B8D600DF9544 /* FirebaseFirestoreSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +114,6 @@
 				FFBA23E4278F5E2B00F41359 /* Repositories */,
 				FFBA23E5278F5E3D00F41359 /* Models */,
 				FFBA23E6278F5E5200F41359 /* Views */,
-				FFBA23E9278F5ED900F41359 /* User */,
-				FFA09E7A278E1D3B00345BA4 /* ContentView.swift */,
 				FFA09E7C278E1D3C00345BA4 /* Assets.xcassets */,
 				FFA09E86278E1DD200345BA4 /* GoogleService-Info.plist */,
 				FFA09E7E278E1D3C00345BA4 /* Preview Content */,
@@ -156,6 +156,7 @@
 				FFBA23F1278F78B600F41359 /* WorkoutListView.swift */,
 				52A7671627A0922F0093C1D5 /* SpeechButton.swift */,
 				52A8E9CF27A1DE08004BF042 /* RecordTextView.swift */,
+				526CEC352834004300DF9544 /* DashBoardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,13 +179,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		FFBA23E9278F5ED900F41359 /* User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,9 +197,10 @@
 			);
 			name = LiftLog;
 			packageProductDependencies = (
-				FFA09E89278E1E2D00345BA4 /* FirebaseAuth */,
-				FFA09E8B278E1E2D00345BA4 /* FirebaseFirestore */,
-				FFA09E8D278E1E2D00345BA4 /* FirebaseFirestoreSwift-Beta */,
+				526CEC2C2829B8C900DF9544 /* FirebaseFirestore */,
+				526CEC2E2829B8D600DF9544 /* FirebaseFirestoreSwift-Beta */,
+				526CEC302829B8DD00DF9544 /* FirebaseAuth */,
+				526CEC332829BFAB00DF9544 /* SwiftUICharts */,
 			);
 			productName = LiftLog;
 			productReference = FFA09E75278E1D3B00345BA4 /* LiftLog.app */;
@@ -237,6 +232,7 @@
 			mainGroup = FFA09E6C278E1D3B00345BA4;
 			packageReferences = (
 				FFA09E88278E1E2D00345BA4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				526CEC322829BFAB00DF9544 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = FFA09E76278E1D3B00345BA4 /* Products */;
 			projectDirPath = "";
@@ -268,9 +264,9 @@
 				FFBA23FB278F7A8D00F41359 /* WorkoutView.Model.swift in Sources */,
 				FFBA23F9278F7A6200F41359 /* NewWorkoutForm.swift in Sources */,
 				5297761227A49FC700F19066 /* RecordTextView.Model.swift in Sources */,
+				526CEC362834004400DF9544 /* DashBoardView.swift in Sources */,
 				FFBA23F7278F7A4000F41359 /* WorkoutView.swift in Sources */,
 				52A8E9D027A1DE08004BF042 /* RecordTextView.swift in Sources */,
-				FFA09E7B278E1D3B00345BA4 /* ContentView.swift in Sources */,
 				FFBA23EB278F5FB500F41359 /* WorkoutRepository.swift in Sources */,
 				52A7671727A0922F0093C1D5 /* SpeechButton.swift in Sources */,
 				52B74EE828244529007C5CD8 /* SignInView.swift in Sources */,
@@ -411,7 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiftLog/Preview Content\"";
-				DEVELOPMENT_TEAM = MFS52BPS4R;
+				DEVELOPMENT_TEAM = V4H5L662NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -446,7 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiftLog/Preview Content\"";
-				DEVELOPMENT_TEAM = MFS52BPS4R;
+				DEVELOPMENT_TEAM = V4H5L662NC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -495,6 +491,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		526CEC322829BFAB00DF9544 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		FFA09E88278E1E2D00345BA4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -506,20 +510,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FFA09E89278E1E2D00345BA4 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FFA09E88278E1E2D00345BA4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		FFA09E8B278E1E2D00345BA4 /* FirebaseFirestore */ = {
+		526CEC2C2829B8C900DF9544 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFA09E88278E1E2D00345BA4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		FFA09E8D278E1E2D00345BA4 /* FirebaseFirestoreSwift-Beta */ = {
+		526CEC2E2829B8D600DF9544 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFA09E88278E1E2D00345BA4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		526CEC302829B8DD00DF9544 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFA09E88278E1E2D00345BA4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		526CEC332829BFAB00DF9544 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 526CEC322829BFAB00DF9544 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
