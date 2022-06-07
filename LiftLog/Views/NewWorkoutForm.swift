@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 struct NewWorkoutForm: View {
     @State var name: String = ""
@@ -16,6 +17,7 @@ struct NewWorkoutForm: View {
     @State var userID: String = ""
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var workoutListViewModel: WorkoutListView.Model
+    let auth = Auth.auth()
 
     var body: some View {
         VStack(alignment: .center, spacing: 30) {
@@ -54,7 +56,7 @@ struct NewWorkoutForm: View {
                 }
 
     private func addWorkout() {
-        let userID = "1"
+        let userID = auth.currentUser?.uid
         let date = Date.now
         let workout = Workout(name: name, set: set, reps: reps, weight: weight, userID: userID, created_date: date)
         workoutListViewModel.add(workout)

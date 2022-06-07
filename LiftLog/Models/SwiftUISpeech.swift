@@ -8,6 +8,7 @@
 import Speech
 import SwiftUI
 import Foundation
+import FirebaseAuth
 
 public class SwiftUISpeech: ObservableObject{
     init(){
@@ -148,7 +149,7 @@ public class SwiftUISpeech: ObservableObject{
         }
         print(weight)
             
-        let userID = "1"
+        let userID = auth.currentUser?.uid
         let date = Date.now
         self.workout_obj = Workout(name: workout, set: set, reps: rep, weight: weight, userID: userID, created_date: date)
         return workout_obj
@@ -200,6 +201,7 @@ public class SwiftUISpeech: ObservableObject{
     private let workout_Sets:[String] = ["one", "two", "three", "four", "five"]
     private var workout_obj = Workout(name: "default", set: "def", reps: "def", weight: "def", created_date: Date.now)
     public var outputText:String = "";
+    let auth = Auth.auth()
 }
 
 struct Previews_SwiftUISpeech_Previews: PreviewProvider {

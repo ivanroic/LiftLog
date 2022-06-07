@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 struct WorkoutListView: View {
     @EnvironmentObject var viewModel: AppViewModel
@@ -14,6 +15,7 @@ struct WorkoutListView: View {
     @State var showForm = false
     @State var showUserView = false
     @State var showSignInView = false
+    let auth = Auth.auth()
 //  @State var user: User?`
   
   var body: some View {
@@ -22,7 +24,7 @@ struct WorkoutListView: View {
         ScrollView(.vertical) {
           VStack {
             // TODO: Add cards here!
-            ForEach(model.workoutViewModels) { workoutViewModel in
+              ForEach(model.workoutViewModels.filter {$0.workout.userID == auth.currentUser?.uid}) { workoutViewModel in
               WorkoutView(model: workoutViewModel)
                 .padding([.vertical])
             }
