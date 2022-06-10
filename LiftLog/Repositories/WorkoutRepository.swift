@@ -8,16 +8,19 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseAuth
 import Combine
 
 class WorkoutRepository: ObservableObject {
     private let store = Firestore.firestore()
     private let path = "workout"
+    let auth = Auth.auth()
     
     @Published var workout: [Workout] = []
     
     init() {
-        get()
+        //get()
+        get_workout()
     }
     
     func get() {
@@ -36,8 +39,19 @@ class WorkoutRepository: ObservableObject {
     }
     
     // function to query database for workout based on userID, name, set number, date:
-    func get_workout(userID:Int, name:String, set:Int, date:Date) {
-        
+    func get_workout() {
+        store.collection(path).whereField("userID", isEqualTo: auth.currentUser?.uid)
+            .addSnapshotListener { querySnapShot, error in
+                if let error = error {
+                    print("Error getting workout: \(error.localizedDescription)")
+                    return
+                }
+                self.workout = querySnapShot?.documents.compactMap {
+                    document in
+                    try? document.data(as: Workout.self)
+                } ?? []
+                //print(self.workout)
+            }
     }
     
     func add(_ workout: Workout) {

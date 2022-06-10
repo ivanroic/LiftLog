@@ -24,7 +24,7 @@ struct WorkoutListView: View {
         ScrollView(.vertical) {
           VStack {
             // TODO: Add cards here!
-              ForEach(model.workoutViewModels.filter {$0.workout.userID == auth.currentUser?.uid}) { workoutViewModel in
+              ForEach(model.workoutViewModels) { workoutViewModel in
               WorkoutView(model: workoutViewModel)
                 .padding([.vertical])
             }
