@@ -136,7 +136,8 @@ struct WorkoutView_Previews: PreviewProvider {
   static var previews: some View {
     let workout = testData[0]
     let model = WorkoutView.Model(workout: workout, workoutRepository: WorkoutRepository())
-    return WorkoutView(model: model)
+      return WorkoutView(model: model)
+          .previewInterfaceOrientation(.portraitUpsideDown)
   }
 }
 

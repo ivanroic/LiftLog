@@ -45,10 +45,10 @@ struct WorkoutListView: View {
                 .font(.title)
             },
         trailing:
-          Button { showForm.toggle() }
+            Button { showForm.toggle() }
             label: {
-              Image(systemName: "plus")
-                .font(.title)
+                Image(systemName: "plus")
+                    .font(.title)
             }
       )
     }

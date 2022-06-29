@@ -10,7 +10,7 @@ import SwiftUI
 import Foundation
 import FirebaseAuth
 
-public class SwiftUISpeech: ObservableObject{
+class SwiftUISpeech: ObservableObject{
     init(){
         
         //Requests auth from User
@@ -149,7 +149,7 @@ public class SwiftUISpeech: ObservableObject{
         }
         print(weight)
             
-        let userID = auth.currentUser?.uid
+        let userID = auth.currentUser?.uid ?? "1231201231"
         let date = Date.now
         self.workout_obj = Workout(name: workout, set: set, reps: rep, weight: weight, userID: userID, created_date: date)
         return workout_obj

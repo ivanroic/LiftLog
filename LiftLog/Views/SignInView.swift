@@ -9,9 +9,10 @@ import Foundation
 import SwiftUI
 import FirebaseAuth
 
-class AppViewModel: ObservableObject {
+public class AppViewModel: ObservableObject {
     
     let auth = Auth.auth()
+    
     
     @Published var signedIn = false
     
@@ -55,7 +56,7 @@ struct InitialView: View {
     var body: some View {
         NavigationView {
             if viewModel.signedIn {
-                WorkoutListView()
+                RecordTextView().environmentObject(SwiftUISpeech())
             }
             else {
                 SignInView()
@@ -87,7 +88,8 @@ struct SignInView: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                 
-                SecureField("Email Address", text: $password)
+                
+                SecureField("Password", text: $password)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
@@ -145,6 +147,7 @@ struct SignUpView: View {
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(.secondarySystemBackground))
+                    
                 
                 Button(action: {
                     
