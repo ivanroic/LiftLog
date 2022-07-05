@@ -10,7 +10,7 @@ import Combine
 
 extension WorkoutView {
   final class Model: ObservableObject, Identifiable {
-    private let workoutRepository: WorkoutRepository
+    let workoutRepository: WorkoutRepository
     @Published var workout: Workout
     private var cancellables: Set<AnyCancellable> = []
     var id = ""

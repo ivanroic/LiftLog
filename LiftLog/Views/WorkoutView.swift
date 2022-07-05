@@ -93,44 +93,52 @@ struct WorkoutView: View {
   }
   
   var backView: some View {
-//    VStack(alignment: .center, spacing: 30) {
-//        VStack(alignment: .leading, spacing: 10) {
-//              Text("Set")
-//                .foregroundColor(.gray)
-//              TextField("Set Number", text: $set)
-//                .textFieldStyle(RoundedBorderTextFieldStyle())
-//                }
     VStack {
       Spacer()
-      Text(model.workout.name)
-        .foregroundColor(Color("rw-dark"))
-        .font(.system(size: 20))
-        .padding(20.0)
-        .multilineTextAlignment(.center)
-        .animation(.easeInOut)
+        HStack{
+            Text("Sets")
+              .foregroundColor(Color("rw-dark"))
+              .font(.system(size: 15))
+              .padding(20.0)
+              .multilineTextAlignment(.center)
+              .animation(.easeInOut)
+            Text("Reps")
+              .foregroundColor(Color("rw-dark"))
+              .font(.system(size: 15))
+              .padding(20.0)
+              .multilineTextAlignment(.center)
+              .animation(.easeInOut)
+            Text("Weight")
+              .foregroundColor(Color("rw-dark"))
+              .font(.system(size: 15))
+              .padding(20.0)
+              .multilineTextAlignment(.center)
+              .animation(.easeInOut)
+        }
+        List(model.workoutRepository.workout.filter({return $0.created_date.formatted(.dateTime.day().month().year()) == model.workout.created_date.formatted(.dateTime.day().month().year()) && $0.name == model.workout.name
+        })){
+            workout in ListRow(workout: workout)
+        }
       
       Spacer()
 
-      HStack(spacing: 40) {
-        Button {
-          // TODO: Mark card as successful
-        }
-        label: { ThumbsUp() }
-        
-        Button {
-          // TODO: Mark card as unsuccessful
-        }
-        label: { ThumbsDown() }
-      }
-      .padding()
+//      HStack(spacing: 40) {
+//        Button {
+//          // TODO: Mark card as successful
+//        }
+//        label: { ThumbsUp() }
+//
+//        Button {
+//          // TODO: Mark card as unsuccessful
+//        }
+//        label: { ThumbsDown() }
+//      }
+//      .padding()
     }
     .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
+    }
   }
-  }
-//  private func showWorkout(_ set: Int) {
-//
-//  }
-//}
+
 
 struct WorkoutView_Previews: PreviewProvider {
   static var previews: some View {
@@ -141,26 +149,39 @@ struct WorkoutView_Previews: PreviewProvider {
   }
 }
 
-struct ThumbsDown: View {
-  var body: some View {
-    Image(systemName: "hand.thumbsdown.fill")
-      .padding()
-      .background(Color.red)
-      .font(.title)
-      .foregroundColor(.white)
-      .clipShape(Circle())
-  }
-}
+//struct ThumbsDown: View {
+//  var body: some View {
+//    Image(systemName: "hand.thumbsdown.fill")
+//      .padding()
+//      .background(Color.red)
+//      .font(.title)
+//      .foregroundColor(.white)
+//      .clipShape(Circle())
+//  }
+//}
+//
+//struct ThumbsUp: View {
+//  var body: some View {
+//    Image(systemName: "hand.thumbsup.fill")
+//      .padding()
+//      .background(Color.green)
+//      .font(.title)
+//      .foregroundColor(.white)
+//      .clipShape(Circle())
+//  }
+//}
 
-struct ThumbsUp: View {
-  var body: some View {
-    Image(systemName: "hand.thumbsup.fill")
-      .padding()
-      .background(Color.green)
-      .font(.title)
-      .foregroundColor(.white)
-      .clipShape(Circle())
-  }
+struct ListRow: View {
+    var workout:Workout
+    var body: some View{
+        HStack{
+            Text(workout.set)
+            Spacer()
+            Text(workout.reps)
+            Spacer()
+            Text(workout.weight)
+        }
+    }
 }
 
 
